@@ -1,5 +1,5 @@
 import React from 'react';
-import buttonComponent from './searchbutton';
+import {Link} from 'react-router-dom';
 
 
 export default class SearchPage extends React.Component {
@@ -7,7 +7,7 @@ export default class SearchPage extends React.Component {
 
     return (
       <div>
-        <section  aria-label="search by author name" className="searchAuthor">
+        <section aria-label="search by author name" className="searchAuthor">
           <label for="authorsearch">Choose an author</label>
 
           <select id="authorsearch">
@@ -19,11 +19,11 @@ export default class SearchPage extends React.Component {
           </select>
         </section>
         <section>
-          <button type="submit" class="goSearchBtn"> Search</button>
+          <Link to='/results' class="startSearchbtn">Start search</Link>
         </section>
 
 
-        <section arial-label="search by genre"className="searchGenre">
+        <section arial-label="search by genre" className="searchGenre">
           <label for="genresearch">Choose an searchGenre</label>
 
           <select id="authorsearch">
@@ -35,7 +35,7 @@ export default class SearchPage extends React.Component {
           </select>
         </section>
         <section>
-          <button type="submit" class="goSearchBtn"> Search</button>
+          <Link to='/results' class="startSearchbtn">Start search</Link>
         </section>
 
       </div>

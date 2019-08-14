@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 
 export default class LandingPage extends React.Component {
@@ -12,7 +12,7 @@ export default class LandingPage extends React.Component {
         <p>Start a search for a new book or a new author to follow</p>
         </section>
         <section>
-          <button type="submit" class="goSearchBtn"> Search</button>
+          <Link  to='/search' class="goSearchBtn">Search</Link>
           </section>
       </div>
     );
