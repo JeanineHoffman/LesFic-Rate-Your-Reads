@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom';
 
 export default class ResultsPage extends React.Component {
     render() {
-      
+      console.log(this.props.list);
       return (
-        <div className="Landingpage">
-          Results page
-        <p>lorem ipsum results go here.</p>
-          <section>
-          <Link  to='/search' class="goSearchBtn">Search</Link>
-          </section>
+        <div className="resultsPage">
+          {/* Results page */}
+        <section>
+          {this.props.list}
+        </section>
+          
         </div>
       );
     }

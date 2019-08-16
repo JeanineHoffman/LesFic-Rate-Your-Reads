@@ -1,43 +1,48 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import SearchAuthor from './searchauthor';
+import SearchGenre from './searchgenre';
+import store from "../store";
+import ResultsPage from './resultspage';
 
 
-export default class SearchPage extends React.Component {
-  render() {
+export default class SearchPage extends Component {
+  state = {
+    searchAuthor: "",
+    searchGenre: ""
+}
+
+updateSearchPage = (author, genre) => {
+ console.log('update:search page ran');
+  this.setState({
+   searchAuthor: author,
+   searchGenre: genre
+ })
+ 
+}
+render() {
+  
+  console.log("this.state.searchAuthor: ", this.state.searchAuthor);
+  const filteredBookTitles = this.state.searchAuthor !== '' ? store['names'].find(obj => { return obj.name === this.state.searchAuthor; }).titles : ''
+   
+  console.log('this.state.searchGenre: ', this.state.searchGenre)
+  let tempBoolean = false
+  if (this.state.searchGenre !== ''  ) tempBoolean = true
+  console.log("this.state.searchGenre !== '': ", tempBoolean)
+  // const filteredGenreTitles = (this.state.searchGenre !== '') ? store['genre'].find(obj => { return obj.genre === this.state.searchGenre; }).titles : ''
 
     return (
       <div>
-        <section aria-label="search by author name" className="searchAuthor">
-          <label for="authorsearch">Choose an author</label>
+        <section>
+        <SearchAuthor store={store} updateSearch={this.updateSearchPage}
+        />
+        <ResultsPage  list={filteredBookTitles} />
 
-          <select id="authorsearch">
-            <option value="">--Please Choose an author--</option>
-            <option value="Fletcher DeLancey">Fletcher DeLancey</option>
-            <option value="Jae">Jae</option>
-            <option value="Caren J. Werlinger">Caren J. Werlinger</option>
-            <option value="Jeanine Hoffman">Jeanine Hoffman</option>
-          </select>
         </section>
         <section>
-          <Link to='/results' class="startSearchbtn">Start search</Link>
+        <SearchGenre store={store} updateSearch={this.updateSearchPage}/>
+        {/* <ResultsPage  list={filteredGenreTitles} /> */}
+
         </section>
-
-
-        <section arial-label="search by genre" className="searchGenre">
-          <label for="genresearch">Choose an searchGenre</label>
-
-          <select id="authorsearch">
-            <option value="">--Please Choose a genre --</option>
-            <option value="historical fiction">Historical Fiction</option>
-            <option value="romance">Romance</option>
-            <option value="paranormal">Paranormal</option>
-            <option value="fantasy">Fantasy</option>
-          </select>
-        </section>
-        <section>
-          <Link to='/results' class="startSearchbtn">Start search</Link>
-        </section>
-
       </div>
     );
   }
