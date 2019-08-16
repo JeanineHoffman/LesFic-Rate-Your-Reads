@@ -9,8 +9,7 @@ export default class SearchAuthor extends Component {
     }
     
     buttonClicked = event => {
-      console.log(this.state.searchAuthor);
-        this.props.updateSearch(this.state.searchAuthor, " ")
+        this.props.updateSearch(this.state.searchAuthor, "")
     };
   
     handleChangeAuthor = event => {

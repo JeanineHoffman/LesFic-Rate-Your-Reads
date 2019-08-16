@@ -12,7 +12,6 @@ export default class SearchPage extends Component {
 }
 
 updateSearchPage = (author, genre) => {
- console.log('update:search page ran');
   this.setState({
    searchAuthor: author,
    searchGenre: genre
@@ -20,15 +19,15 @@ updateSearchPage = (author, genre) => {
  
 }
 render() {
-  
+ 
   console.log("this.state.searchAuthor: ", this.state.searchAuthor);
-  const filteredBookTitles = this.state.searchAuthor !== '' ? store['names'].find(obj => { return obj.name === this.state.searchAuthor; }).titles : ''
+  const filteredBookTitles = this.state.searchAuthor ? store['names'].find(obj => { return obj.name === this.state.searchAuthor; }).titles : ''
    
   console.log('this.state.searchGenre: ', this.state.searchGenre)
-  let tempBoolean = false
-  if (this.state.searchGenre !== ''  ) tempBoolean = true
-  console.log("this.state.searchGenre !== '': ", tempBoolean)
-  // const filteredGenreTitles = (this.state.searchGenre !== '') ? store['genre'].find(obj => { return obj.genre === this.state.searchGenre; }).titles : ''
+  // let tempBoolean = false
+  // if (this.state.searchGenre !== ''  ) tempBoolean = true
+  // console.log("this.state.searchGenre !== '': ", tempBoolean)
+  const filteredGenreTitles = this.state.searchGenre ? store['genre'].find(obj => { return obj.genre === this.state.searchGenre; }).titles : ''
 
     return (
       <div>
@@ -40,7 +39,7 @@ render() {
         </section>
         <section>
         <SearchGenre store={store} updateSearch={this.updateSearchPage}/>
-        {/* <ResultsPage  list={filteredGenreTitles} /> */}
+        <ResultsPage  list={filteredGenreTitles} />
 
         </section>
       </div>
