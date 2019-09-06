@@ -1,11 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch}  from 'react-router-dom';
-import LandingPage from './components/landingpage';
-import ResultsPage from './components/resultspage';
-import SearchPage from './components/searchpage';
+import React, { Component } from "react";
+// import Component from "react-router-dom";
+
+import  {BrowserRouter as Router, Route, Switch}  from 'react-router-dom';
+import LandingPage from './landingpage/landingpage';
+import ResultsPage from './resultspage/resultspage';
+import SearchPage from './searchpage/searchpage';
 
 
-export class Routes extends React.Component {
+export default class Routes extends Component {
 
 
   render() {

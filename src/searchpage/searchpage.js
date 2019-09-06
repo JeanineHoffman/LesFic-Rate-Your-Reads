@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import SearchAuthor from './searchauthor';
-import SearchGenre from './searchgenre';
+import SearchAuthor from '../resultspage/searchauthor/searchauthor';
+import SearchGenre from '../searchgenre/searchgenre';
 import store from "../store";
-import ResultsPage from './resultspage';
+import ResultsPage from '../resultspage/resultspage';
 
 
 export default class SearchPage extends Component {

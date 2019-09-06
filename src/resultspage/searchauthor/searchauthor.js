@@ -3,18 +3,18 @@
 import React, { Component } from 'react';
 
 
-export default class SearchAuthor extends Component {
+export default class SearchByAuthor extends Component {
     state = {
         searchAuthor: ""
     }
     
     buttonClicked = event => {
-        this.props.updateSearch(this.state.searchAuthor, "")
+        this.props.updateSearch(this.state.searchByAuthor, "")
     };
   
     handleChangeAuthor = event => {
       this.setState({
-        searchAuthor: event.target.value
+        searchByAuthor: event.target.value
       });
     };
     render() {
@@ -31,7 +31,6 @@ export default class SearchAuthor extends Component {
           </select>
         </section>
         <section>
-        {/* <Link  to='/search' class="goSearchBtn">Search</Link> */}
           <button className="startSearchbtn btn" onClick={this.buttonClicked}>Start Search</button>
         </section>
       </div>

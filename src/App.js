@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
+import Routes from './routes';
+
 import './App.css';
-import { Routes } from './routes';
+
+export default class App extends Component {
+  state = {
+    id: [],
+    genre: "",
+    title: "",
+    author: ""
+  };
+  componentDidMount() {
+    
+      fetch(`https://lesfic.herokuapp.com/books`)
+    
+      .then((booksResponse) => {
+        return booksResponse.json()
+      })
+      .then(books => {
+        this.setState({ books })
+      }
+      // .catch(error => (error))
+      )
+  };
 
 
-
-class App extends Component {
   render() {
 
     return (
@@ -15,4 +35,3 @@ class App extends Component {
   }
 }
 
-export default App;
