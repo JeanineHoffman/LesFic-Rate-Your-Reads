@@ -17,6 +17,7 @@ updateSearchPage = (author, genre) => {
    searchGenre: genre
  })
  
+ 
 }
 render() {
  
