@@ -5,10 +5,12 @@
 * {
   box-sizing: border-box;
   background-color: #BFA6CC;
-  height: 100%;;
+  /* height: 100%;; */
 }
 
 body {
+  margin: 0 auto;
+  padding: 20%;
   font-family: "Open Sans",
   sans-serif; 
   font-size: 20px;
@@ -17,9 +19,9 @@ body {
   line-height: 1.5;
   background-color: #BFA6CC;
 }
+
 .goSearchBtn{
-	width: 130px;
-  height:7em;
+	font-size: 1.5em;
   border: 3px solid #9875AA;
 	border-radius: 25px;
 }
@@ -29,7 +31,20 @@ body {
     color: #FDD835;
     cursor: pointer;
   } 
-
+  button{
+    font-size: 1.5em;
+    border: 3px solid #9875AA;
+    border-radius: 25px;
+  }
+  button:hover {
+      background-color: #3f2c30;
+      border: 3px solid #dfd9d9;
+      color: #FDD835;
+      cursor: pointer;
+    } 
+  .searchText {
+    font-size: 20px;
+  }
 
 /* nav {
   position: fixed;
@@ -44,17 +59,21 @@ footer {
 }
 
 header {
-  padding: 12% 0;
+  margin-top: 0;
+  padding: 6% 0;
+  background-color: #BFA6CC;
+  font-size: 2.2em;
 }
 
 section {
-  min-height: 200px;
+  /* min-height: 200px; */
+  margin: 0, auto;
   padding: 6% 0;
   background-color: #BFA6CC
 }
 
 section:nth-child(even) {
-min-height: 10rem;
+/* min-height: 10rem; */
 background-color: #BFA6CC;
 }
 

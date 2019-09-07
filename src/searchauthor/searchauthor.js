@@ -22,7 +22,7 @@ export default class SearchByAuthor extends Component {
       <div>
         <section aria-label="search author" className="searchAuthor">
           <label htmlFor="authorsearch">Choose an author</label>
-          <select id="authorsearch" name="authorSearch" onChange={this.handleChangeAuthor} value={this.state.authorSearch}>
+          <select id="authorsearch" className="searchText" name="authorSearch" onChange={this.handleChangeAuthor} value={this.state.authorSearch}>
             <option value="">--Please Choose an author--</option>
             <option value="Fletcher DeLancey">Fletcher DeLancey</option>
             <option value="Jae">Jae</option>

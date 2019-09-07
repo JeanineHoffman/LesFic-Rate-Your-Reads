@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchAuthor from '../resultspage/searchauthor/searchauthor';
+import SearchAuthor from '../searchauthor/searchauthor';
 import SearchGenre from '../searchgenre/searchgenre';
 import store from "../store";
 import ResultsPage from '../resultspage/resultspage';
