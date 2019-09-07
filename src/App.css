@@ -4,19 +4,23 @@
 
 * {
   box-sizing: border-box;
+  background-color: #BFA6CC;
+  height: 100%;;
 }
 
 body {
   font-family: "Open Sans",
   sans-serif; 
   font-size: 20px;
-  color: #444;
+  color: #774B8E;
   text-align: center;
   line-height: 1.5;
+  background-color: #BFA6CC;
 }
 .goSearchBtn{
-	width: 5em;
-	height:3em;
+	width: 130px;
+  height:7em;
+  border: 3px solid #9875AA;
 	border-radius: 25px;
 }
 .goSearchBtn:hover {
@@ -25,21 +29,19 @@ body {
     color: #FDD835;
     cursor: pointer;
   } 
-nav,
-footer {
-  padding: 1% 0;
-  background-color: #aaa;
-}
 
-nav {
+
+/* nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+} */
+
+footer {
+  background-color: #BFA6CC;
 }
-
-
 
 header {
   padding: 12% 0;
@@ -48,11 +50,12 @@ header {
 section {
   min-height: 200px;
   padding: 6% 0;
-  background-color: #bbb;
+  background-color: #BFA6CC
 }
 
 section:nth-child(even) {
-  background-color: #ddd;
+min-height: 10rem;
+background-color: #BFA6CC;
 }
 
 
