@@ -19,6 +19,7 @@ body {
   line-height: 1.5;
   background-color: #BFA6CC;
 }
+
 .goSearchBtn{
 	font-size: 1.5em;
   border: 3px solid #9875AA;
@@ -58,8 +59,10 @@ footer {
 }
 
 header {
-  padding: 12% 0;
+  margin-top: 0;
+  padding: 6% 0;
   background-color: #BFA6CC;
+  font-size: 2.2em;
 }
 
 section {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Routes from './routes';
-
 import './App.css';
 
 export default class App extends Component {
@@ -29,7 +28,7 @@ export default class App extends Component {
 
     return (
       <div className="App">
-        <h1>LesFic: Rate Your Reads</h1>
+        <header role="banner">LesFic: Rate Your Reads</header>
         <Routes />
       </div>
     );
