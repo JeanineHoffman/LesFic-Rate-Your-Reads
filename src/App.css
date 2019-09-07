@@ -9,8 +9,8 @@
 }
 
 body {
-  margin: 0;
-  padding: 60px;
+  margin: 0 auto;
+  padding: 20%;
   font-family: "Open Sans",
   sans-serif; 
   font-size: 20px;
@@ -41,6 +41,9 @@ body {
       color: #FDD835;
       cursor: pointer;
     } 
+  .searchText {
+    font-size: 20px;
+  }
 
 /* nav {
   position: fixed;

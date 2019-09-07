@@ -24,7 +24,7 @@ handleListGenre = event => {
         <section arial-label="search by genre" className="searchGenre">
           <label htmlFor="genresearch">Choose a genre to search</label>
 
-          <select id="genresearch" name="genreSearch" onChange={this.handleListGenre} value={this.state.genreSearch}>>
+          <select id="genresearch" className="searchText" name="genreSearch" onChange={this.handleListGenre} value={this.state.genreSearch}>>
             <option value="">--Please Choose a genre --</option>
             <option value="scifi">Science Fiction</option>
             <option value="romance">Romance</option>
