@@ -5,7 +5,7 @@ export default class ResultsPage extends Component {
   render() {
     let results = this.props.list;
     let listResults = results && results.map((result) =>
-      <li>result</li>
+      <li>{result}</li>
     );
     return (
       <div className="resultsPage">
