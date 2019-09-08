@@ -3,17 +3,16 @@ import React, { Component } from "react"
 
 export default class ResultsPage extends Component {
   render() {
-    console.log(this.props.list)
-    // let results = this.props.list;
-    let listResults = results &&results.map((result) =>
+    let results = this.props.list;
+    let listResults = results && results.map((result) =>
       <li>result</li>
-      );
+    );
     return (
       <div className="resultsPage">
         <section>
-          {/* <ul>
+          <ul>
             {listResults}
-          </ul> */}
+          </ul>
         </section>
       </div>
     );
