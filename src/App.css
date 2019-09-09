@@ -46,14 +46,6 @@ body {
     font-size: 20px;
   }
 
-/* nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-} */
-
 footer {
   background-color: #BFA6CC;
 }
@@ -66,14 +58,12 @@ header {
 }
 
 section {
-  /* min-height: 200px; */
   margin: 0, auto;
   padding: 6% 0;
   background-color: #BFA6CC
 }
 
 section:nth-child(even) {
-/* min-height: 10rem; */
 background-color: #BFA6CC;
 }
 
