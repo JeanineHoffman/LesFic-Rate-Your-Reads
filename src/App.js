@@ -10,17 +10,15 @@ export default class App extends Component {
     books: []
   };
   componentDidMount() {
-    
-      fetch(`https://lesfic.herokuapp.com/books`)
-    
+
+    fetch(`https://lesfic.herokuapp.com/books`)
+
       .then((booksResponse) => {
         return booksResponse.json()
       })
       .then(books => {
         this.setState({ books })
-      }
-      // .catch(error => (error))
-      )
+      })
   };
 
 
@@ -42,7 +40,6 @@ export default class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
         <header role="banner">LesFic: Rate Your Reads</header>

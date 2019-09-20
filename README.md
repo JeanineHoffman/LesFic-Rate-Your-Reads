@@ -1,81 +1,21 @@
-LesFic Rate Your Reads
-https://lesfic-rate-your-reads.jeaninehoffman1970.now.sh/
+# Name: LesFic Rate Your Reads
 
+## Link to live app: "https://lesfic-rate-your-reads.jeaninehoffman1970.now.sh/"
 
+### Link to client side repo: "https://github.com/JeanineHoffman/LesFic-Rate-Your-Reads.git"
 
+#### link to  server side repo: "https://github.com/JeanineHoffman/lesfic-server.git"
 
+#### documentation link: "https://documenter.getpostman.com/view/6710319/SVmpX22u"
 
+##### screenshots:Landing page: <img src="./src/img/landingPage.png" alt="landingpage screenshot" height="300px" /> 
 
+##### Search page: <img src="./src/img/searchpageB4.png" alt="search screenshot before a search happens" height="300px"/> 
 
+###### Search page: <img src="./src/img/searchResults.png" alt="search results screen shot for a selected author and her books listed" height="300px"/> 
 
+###### <p>The user is able to search for something new to read by listing all books by specific authors or if the user prefers they can search for a book based on what sub-genre (under the genre of lesbian fiction) by using the drop down menu and selecting the genre. Future iterations will have a place for users to enter new books and authors to the DB with (hopefully) a check on spelling by confirming against Amazon or GoodReads. There is also a plan for the rating system to go live as well as accounts being set up to save searchs</p>
 
+###### tech stack: html, JS, JQuery, React, Node.js, express, Knex and Psql. Deployed via ZEIT and Heroku.
 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
+###### Designed and written by Jeanine Hoffman with assitance by my cohort, instructors, and my mentor
