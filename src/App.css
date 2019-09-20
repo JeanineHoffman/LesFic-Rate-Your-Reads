@@ -49,17 +49,6 @@ body {
     font-size: 20px;
   }
 
-/* nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-} */
-
-/* footer {
-  background-color: #BFA6CC;
-} */
 
 header {
   margin-top: 0;
@@ -69,14 +58,11 @@ header {
 }
 
 section {
-  /* background-color: #BFA6CC; */
   font-size: 1.3rem;
   padding: 2% 0;
 }
 
-section:nth-child(even) {
-/* background-color: #BFA6CC; */
-}
+
  .Landingpage {
   font-size: 1.3em;
   width: 100%;
