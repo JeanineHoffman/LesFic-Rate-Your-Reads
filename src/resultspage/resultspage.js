@@ -3,12 +3,12 @@ import React from "react"
 
 export default class ResultsPage extends React.Component {
     render() {
-      console.log(this.props.list);
+
       return (
         <div className="resultsPage">
-        <section>
-          {this.props.list}
-        </section>
+        <ul>
+          {this.props.list.map(item=><li>{item}</li>)}
+        </ul>
         
         </div>
       );
