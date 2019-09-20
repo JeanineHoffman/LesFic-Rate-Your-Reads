@@ -7,11 +7,11 @@ export default class LandingPage extends Component {
     return (
       <div className="Landingpage">
         <section>
-        <h3>The best way to search for new books in a variety of sub-genres and maybe find new authors to follow </h3>
-        <p>To look for one of our included authors or to search for books, click the button below. From there, use one of our drop down menus to pick a search option and click on the button below it to get your results. You may resart your search from the same page. Happy reading!</p>
+        Start by clicking the button below and use one of our drop down menus to pick a search option and click on the button below it to get your results. You may restart your search from the same page. Happy reading!
         </section>
         <section>
           <Link  to='/search' className="goSearchBtn">Search</Link>
+          <Link  to='/newbook' className="goSearchBtn">New Book</Link>
           </section>
       </div>
     );
