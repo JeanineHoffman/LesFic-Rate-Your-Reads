@@ -1,6 +1,6 @@
 // authorsearch component-take input from data request and fetch from the API/STORE
 
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 
 
 export default class SearchByAuthor extends Component {
@@ -40,8 +40,8 @@ export default class SearchByAuthor extends Component {
         </section>
         <section>
           <button className="startSearchbtn btn" onClick={this.buttonClicked}>Start Search</button>
-          
         </section>
+      
       </div>
     );
   }

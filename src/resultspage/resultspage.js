@@ -1,7 +1,7 @@
 // receive data from api fetch and render the results for users. 
-import React from "react"
+import React, {Component} from "react"
 
-export default class ResultsPage extends React.Component {
+export default class ResultsPage extends Component {
     render() {
 
       return (
@@ -9,7 +9,6 @@ export default class ResultsPage extends React.Component {
         <ul>
           {this.props.list.map(item=><li>{item}</li>)}
         </ul>
-        
         </div>
       );
     }

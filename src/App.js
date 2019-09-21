@@ -3,7 +3,7 @@ import LandingPage from './landingpage/landingpage';
 import SearchPage from './searchpage/searchpage';
 import {Switch,Route} from 'react-router-dom';
 import './App.css';
-import NewEntryBtn from './newEntry/newentryform';
+import NewEntryBtn from './newEntry/newbook';
 
 export default class App extends Component {
   state = {

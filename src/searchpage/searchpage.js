@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import SearchAuthor from '../searchauthor/searchauthor';
 import SearchGenre from '../searchgenre/searchgenre';
 // import store from "../store";
@@ -47,6 +48,10 @@ render() {
     return (
       <div>
         <section>
+          <p className="newUpdateP">Want to add a new author or update an author with a new release?</p>
+          <Link  to='/newbook' className="newBookBtn">New Book</Link>
+        </section>
+        <section>
         <SearchAuthor store={books} updateSearch={this.updateSearchPage}
         />
         <ResultsPage  list={filteredBookTitles} />
@@ -55,7 +60,6 @@ render() {
         <section>
         <SearchGenre store={books} updateSearch={this.updateSearchPage}/>
         <ResultsPage  list={filteredGenreTitles} />
-
         </section>
       </div>
     );
