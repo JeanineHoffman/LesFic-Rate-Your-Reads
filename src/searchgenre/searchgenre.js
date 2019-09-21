@@ -33,9 +33,8 @@ handleListGenre = event => {
           </select>
         </section>
         <section>
-        <button className="startSearchbtn btn" onClick={this.buttonClicked}>Start Search</button>        
+        <button className="startSearchbtn btn" onClick={this.buttonClicked}>Start Search</button>     
         </section>
-
       </div>
     );
   }
