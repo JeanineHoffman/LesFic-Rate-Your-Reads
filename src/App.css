@@ -105,4 +105,9 @@ section {
     width: 310px;
     margin: 0 auto;
   }
+
+  .dropdown {
+    width: 16rem;
+    color: #3f2c30;
+  }
 }

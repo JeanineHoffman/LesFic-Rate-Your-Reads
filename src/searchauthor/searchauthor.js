@@ -18,7 +18,7 @@ export default class SearchByAuthor extends Component {
       });
     };
     render() {
-
+      
       const authors = [];
 
       this.props.store.forEach(book=>{
