@@ -32,7 +32,7 @@ export default function NewEntryForm(props) {
             <option value="Non-Fiction">Non-Fiction</option>
             </select>
             </li>
-            <button type="submit" className="submitBtn" aria-label="submit button" onClick="" >Submit your new entry</button>
+            <li><input type="submit" className="submitBtm" aria-label="Add Book" value="Add Book" /></li>
         </ul>
       </form>
 
