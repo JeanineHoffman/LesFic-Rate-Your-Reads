@@ -17,7 +17,7 @@ export default function NewEntryForm(props) {
           <li><label>Book Title as listed on Amazon or Bella Books</label></li>
           <li><input type="text" name="title" label="Book Name" /></li>
           <li><label>Genre</label></li>
-          <li><select id="genre" className="dropdown"  aria-label="menuitem">
+          <li><select id="genre" className="dropdown" aria-label="menuitem">
             <option value="Romance">Romance</option>
             <option value="Action/Adventure">Action/Adventure</option>
             <option value="Mystery/Suspense/Intrigue">Mystery/Suspense/Intrigue</option>
@@ -30,14 +30,14 @@ export default function NewEntryForm(props) {
             <option value="Erotica">Erotica</option>
             <option value="Poetry">Poetry</option>
             <option value="Non-Fiction">Non-Fiction</option>
-            </select>
-            </li>
-            <li><input type="submit" aria-label="Add Book" value="Add Book" /></li>
+          </select>
+          </li>
+          <li><input type="submit" aria-label="Add Book" value="Add Book" /></li>
         </ul>
       </form>
-
     </section>
+    
         )
-      
-      }
-      
+
+}
+
