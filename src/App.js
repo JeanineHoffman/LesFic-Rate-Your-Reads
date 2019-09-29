@@ -22,6 +22,11 @@ export default class App extends Component {
       })
   };
 
+   addbookstate = (book)  => {
+    this.setState({ books: [...this.state.books, book] }, () => {
+      
+    });
+   }
 
   addBook = (e, history) => {
     e.preventDefault();
@@ -34,13 +39,8 @@ export default class App extends Component {
       genre: genre.value
     }
     console.log(book);
-    // fetch post request
-    // .then()
+    
 
-
-    // this.setState({books: [...this.state.books, book]},()=>{
-    //   history.push('/');
-    // });
     fetch(`https://lesfic.herokuapp.com/books`, {
       method: 'POST',
       mode: 'cors',
@@ -50,11 +50,13 @@ export default class App extends Component {
       body: JSON.stringify(book),
     })
     .then(res => res.json())
-      .then(function (book) {
-        this.setState({ books: [...this.state.books, book] }, () => {
-          history.push('/books');
-        });
-      })
+      // .then(function (book) {
+        history.push('/');
+        // this.setState({ books: [...this.state.books, book] }, () => {
+        //   history.push('/books');
+        // });
+        this.addbookstate(book) 
+      // })
   }
   
   render() {
