@@ -13,7 +13,7 @@ export default class LandingPage extends Component {
           <Link to='/search' className="goSearchBtn">Search</Link>
         </section>
         <section>
-          <p class="landingPageP">Want to help us grow our library? Add new Authors/Books below.</p>
+          <p className="landingPageP">Want to help us grow our library? Add new Authors/Books below.</p>
           <Link to='/newbook' className="newBookBtn">New Book</Link>
         </section>
       </div>
