@@ -1,7 +1,5 @@
 import React from 'react';
-import SearchPage from '../searchpage/searchpage';
-import SearchGenre from '../searchgenre/searchgenre';
-import ResultsPage from '../resultspage/resultspage';
+
 
 
 
