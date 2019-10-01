@@ -11,7 +11,7 @@ export default class App extends Component {
   };
   componentDidMount() {
 
-    fetch(`https://lesfic.herokuapp.com/books`)
+    fetch(`https://lesficreads.herokuapp.com/books`)
 
       .then((booksResponse) => {
         return booksResponse.json()
