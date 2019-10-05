@@ -5,19 +5,25 @@ import React, { Component } from 'react';
 export default class SearchGenre extends Component {
   state = {
     searchGenre: ""
-}
+  }
 
-buttonClicked = event => {
-  console.log(this.state.searchGenre);
+  buttonClicked = event => {
+    console.log(this.state.searchGenre);
     this.props.updateSearch("", this.state.searchGenre)
-};
+  };
 
-handleListGenre = event => {
-  this.setState({
-    searchGenre: event.target.value
-  });
-};
+  handleListGenre = event => {
+    this.setState({
+      searchGenre: event.target.value
+    });
+  };
   render() {
+    const genres = [];
+    this.props.store.forEach(book => {
+      if (!genres.includes(book.genre)) {
+        genres.push(book.genre);
+      }
+    });
 
     return (
       <div>
@@ -25,7 +31,12 @@ handleListGenre = event => {
           <label htmlFor="genresearch">Choose a genre to search</label>
 
           <select id="genresearch" className="searchText" name="genreSearch" onChange={this.handleListGenre} value={this.state.genreSearch}>>
-          <option value="Romance">Romance</option>
+          
+          <option value="">--Please Choose a genre--</option>
+            {genres.map(genre=><option value={genre}>{genre}</option>)}
+          </select>
+
+            {/* <option value="Romance">Romance</option>
             <option value="Action/Adventure">Action/Adventure</option>
             <option value="Mystery/Suspense/Intrigue">Mystery/Suspense/Intrigue</option>
             <option value="Historical">Historical</option>
@@ -36,11 +47,11 @@ handleListGenre = event => {
             <option value="Short Story Anthologies">Short Story Anthologies</option>
             <option value="Erotica">Erotica</option>
             <option value="Poetry">Poetry</option>
-            <option value="Non-Fiction">Non-Fiction</option>
-          </select>
+            <option value="Non-Fiction">Non-Fiction</option> */}
+          {/* </select> */}
         </section>
         <section>
-        <button className="startSearchbtn btn" onClick={this.buttonClicked}>Start Search</button>     
+          <button className="startSearchbtn handleListGenre" onClick={this.buttonClicked}>Start Search</button>
         </section>
       </div>
     );

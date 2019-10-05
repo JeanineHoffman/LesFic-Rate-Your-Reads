@@ -7,7 +7,8 @@ export default class ResultsPage extends Component {
       return (
         <div className="resultsPage">
         <ul>
-          {this.props.list.map(item=><li>{item}</li>)}
+          {this.props.list.map(item=>
+          <li>{item}</li>)}
         </ul>
         </div>
       );

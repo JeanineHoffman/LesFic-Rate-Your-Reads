@@ -17,6 +17,7 @@ export default class App extends Component {
         return booksResponse.json()
       })
       .then(books => {
+        console.log({books});
         this.setState({ books })
       })
   };
