@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "now": "^16.2.0",
+    "history": "^4.10.1",
+    "now": "^16.3.1",
     "promises": "^0.2.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
