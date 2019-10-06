@@ -25,18 +25,31 @@ export default class App extends Component {
 
   addBook = (e,history) => {
     e.preventDefault();
-    const id = this.state.books.length + 1;
+    // const id = this.state.books.length + 1;
     const {author,title,genre} = e.target;
     const book = {
-      id,
       author: author.value,
       title: title.value,
       genre: genre.value
     }
-    // fetch post request
-    // .then()
-    this.setState({books: [...this.state.books, book]},()=>{
-      history.push('/');
+
+    fetch(`https://lesficreads.herokuapp.com/books`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(book),
+      })
+      .then(response => {
+        if(!response.ok)
+        return response.json().then(e =>
+          Promise.reject(e))
+        return response.json()
+      })
+      .then()
+        this.setState({books: [...this.state.books, book]},()=>{
+        history.push('/');
+        console.log(this.state.books);
     });
   }
 

@@ -8,7 +8,8 @@ export default class ResultsPage extends Component {
         <div className="resultsPage">
         <ul>
           {this.props.list.map(item=>
-          <li>{item}</li>)}
+          <li key={item.id}>{item}</li>
+          )}
         </ul>
         </div>
       );

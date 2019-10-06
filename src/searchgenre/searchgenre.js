@@ -33,7 +33,9 @@ export default class SearchGenre extends Component {
           <select id="genresearch" className="searchText" name="genreSearch" onChange={this.handleListGenre} value={this.state.genreSearch}>>
           
           <option value="">--Please Choose a genre--</option>
-            {genres.map(genre=><option value={genre}>{genre}</option>)}
+            {genres.map(genre=>
+            <option value={genre} key={genre}>{genre}</option>
+            )}
           </select>
 
             {/* <option value="Romance">Romance</option>

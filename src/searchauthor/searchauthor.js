@@ -35,7 +35,9 @@ export default class SearchByAuthor extends Component {
           <label htmlFor="authorsearch">Choose an author</label>
           <select id="authorsearch" className="searchText" name="authorSearch" onChange={this.handleChangeAuthor} value={this.state.authorSearch}>
             <option value="">--Please Choose an author--</option>
-            {authors.map(author=><option value={author}>{author}</option>)}
+            {authors.map(author=>
+            <option value={author} key={author}>{author}</option>
+            )}
           </select>
         </section>
         <section>
