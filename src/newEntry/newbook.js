@@ -7,14 +7,14 @@ export default function NewEntryForm(props) {
 
   return (
     <section className="newEntryForm">
-      <h1>Please enter the correct spelling of the author, book, and genre that you would like to add to our list</h1>
+      <h1>Please enter the correct spelling of the author, book, and genre that you would like to add to our list. You are on the honor system, so please ensure the book is a story featuring lesbians.</h1>
       <form label="inputData" onSubmit={e => props.addBook(e, props.history)}>
         <ul>
-          <li><label>Author Name as listed on Amazon or Bella Books</label></li>
+          <li><label htmlFor="author">Author Name as listed on Amazon or Bella Books</label></li>
           <li><input type="text" name="author" label="Author Name" /> </li>
-          <li><label>Book Title as listed on Amazon or Bella Books</label></li>
+          <li><label htmlFor="bookTitle">Book Title as listed on Amazon or Bella Books</label></li>
           <li><input type="text" name="title" label="Book Name" /></li>
-          <li><label>Genre</label></li>
+          <li><label htmlFor="genre">Genre</label></li>
           <li><select id="genre" className="dropdown" aria-label="menuitem">
             <option value="Romance">Romance</option>
             <option value="Action/Adventure">Action/Adventure</option>
@@ -30,7 +30,7 @@ export default function NewEntryForm(props) {
             <option value="Non-Fiction">Non-Fiction</option>
           </select>
           </li>
-          <li><input type="submit" aria-label="Add Book" value="Add Book" /></li>
+          <li><input type="submit" className="newBookBtn"  aria-label="Add Book" value="Add Book" /></li>
         </ul>
       </form>
     </section>

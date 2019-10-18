@@ -14,7 +14,7 @@ export default class SearchGenre extends Component {
 
   handleListGenre = event => {
     this.setState({
-      searchGenre: event.target.value
+      searchGenre:event.target.value
     });
   };
   render() {

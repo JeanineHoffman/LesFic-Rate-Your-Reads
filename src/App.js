@@ -56,7 +56,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header role="banner">LesFic: Rate Your Reads</header>
+        <header role="banner">LesFic Repository</header>
         <main className="container-fluid">
           <Switch>
             <Route exact path='/' component={LandingPage} />
