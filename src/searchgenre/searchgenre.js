@@ -26,9 +26,9 @@ export default class SearchGenre extends Component {
     });
 
     return (
-      <div>
+      <div className="searchComponent">
         <section arial-label="search by genre" className="searchGenre">
-          <label htmlFor="genresearch">Choose a genre to search</label>
+          <label htmlFor="genresearch">Choose a genre </label>
 
           <select id="genresearch" className="searchText" name="genreSearch" onChange={this.handleListGenre} value={this.state.genreSearch}>>
 
