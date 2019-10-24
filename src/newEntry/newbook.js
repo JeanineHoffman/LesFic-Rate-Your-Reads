@@ -11,9 +11,9 @@ export default function NewEntryForm(props) {
       <form label="inputData" onSubmit={e => props.addBook(e, props.history)}>
         <ul>
           <li><label htmlFor="author">Author Name as listed on Amazon or Bella Books</label></li>
-          <li><input type="text" name="author" label="Author Name" /> </li>
+          <li><input required type="text" name="author" pattern=".{3,}" label="Author Name" /> </li>
           <li><label htmlFor="bookTitle">Book Title as listed on Amazon or Bella Books</label></li>
-          <li><input type="text" name="title" label="Book Name" /></li>
+          <li><input required type="text" pattern=".{3,}" name="title" label="Book Name" /></li>
           <li><label htmlFor="genre">Genre</label></li>
           <li><select id="genre" className="dropdown" aria-label="menuitem">
             <option value="Romance">Romance</option>
