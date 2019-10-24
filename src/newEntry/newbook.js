@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 export default function NewEntryForm(props) {
 
@@ -28,12 +28,10 @@ export default function NewEntryForm(props) {
             <option value="Non-Fiction">Non-Fiction</option>
           </select>
           </li>
-          <li><input type="submit" className="newBookBtn"  aria-label="Add Book" value="Add Book" /></li>
+          <li className="nav"><input type="submit" className="newBookBtn" aria-label="Add Book" value="Add Book" /><Link to='/search' className="goSearchBtn return">Search</Link></li>
         </ul>
       </form>
     </section>
-    
-        )
-
+  )
 }
 

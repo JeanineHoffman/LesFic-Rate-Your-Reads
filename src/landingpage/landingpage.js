@@ -6,7 +6,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div className="Landingpage">
-        <section>
+        <section className="landing">
           Start by clicking the button below and use one of our drop down menus to pick a search option and click on the button below it to get your results. You may restart your search from the same page. Happy reading!
         </section>
         <section>

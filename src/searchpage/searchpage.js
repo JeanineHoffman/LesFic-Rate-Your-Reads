@@ -13,53 +13,55 @@ export default class SearchPage extends Component {
   }
 
   updateSearchPage = (author, genre) => {
-      this.setState({
+    this.setState({
       searchAuthor: author,
       searchGenre: genre
     })
   }
- 
 
 
 
-render() {
- 
-  const {books} = this.props;
-  
+
+  render() {
+
+    const { books } = this.props;
+
     const filteredBookTitles = [];
-    if(this.state.searchAuthor){
+    if (this.state.searchAuthor) {
       books.forEach(obj => {
-          if(obj.author === this.state.searchAuthor){
-            filteredBookTitles.push(obj.title) 
-          }
-        });
-      }
-   
+        if (obj.author === this.state.searchAuthor) {
+          filteredBookTitles.push(obj.title)
+        }
+      });
+    }
+
     const filteredGenreTitles = [];
-    if(this.state.searchGenre){
+    if (this.state.searchGenre) {
       books.forEach(obj => {
-          if(obj.genre === this.state.searchGenre){
-            filteredGenreTitles.push(obj.title) 
-          }
-        });
-      }
-   
+        if (obj.genre === this.state.searchGenre) {
+          filteredGenreTitles.push(obj.title)
+        }
+      });
+    }
+
 
     return (
       <div>
         <section>
           <p className="newUpdateP">Want to add a new author or update an author with a new release?</p>
-          <Link  to='/newbook' className="newBookBtn">New Book</Link>
+          <Link to='/newbook' className="newBookBtn">New Book</Link>
         </section>
-        <section>
-        <SearchAuthor store={books} updateSearch={this.updateSearchPage}
-        />
-        <ResultsPage  list={filteredBookTitles} />
+        <section className="Search">
+          <div arial-label="author search">
+            <SearchAuthor store={books} updateSearch={this.updateSearchPage}
+            />
+            <ResultsPage list={filteredBookTitles} />
+          </div>
 
-        </section>
-        <section>
-        <SearchGenre store={books} updateSearch={this.updateSearchPage}/>
-        <ResultsPage  list={filteredGenreTitles} />
+          <div aria-label="genre search">
+            <SearchGenre store={books} updateSearch={this.updateSearchPage} />
+            <ResultsPage list={filteredGenreTitles} />
+          </div>
         </section>
       </div>
     );

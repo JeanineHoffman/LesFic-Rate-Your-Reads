@@ -4,7 +4,7 @@ import SearchPage from './searchpage/searchpage';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import NewEntryBtn from './newEntry/newbook';
-
+import Sidebar from './sidebar/sidebar';
 
 export default class App extends Component {
   state = {
@@ -59,13 +59,16 @@ export default class App extends Component {
     return (
       <div className="App">
         <header role="banner">LesFic Repository</header>
-        <main className="container-fluid">
+        <section className="container-fluid">
+          <Sidebar />
+          <main role='main'>
           <Switch>
             <Route exact path='/' component={LandingPage} />
             <Route exact path='/search' render={(rprops) => <SearchPage {...rprops} books={this.state.books} />} />
             <Route exact path='/newbook' render={(rprops) => <NewEntryBtn {...rprops} addBook={this.addBook} />} />
           </Switch>
         </main>
+        </section>
       </div>
     );
   }
