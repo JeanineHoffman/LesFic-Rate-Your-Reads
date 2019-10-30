@@ -52,13 +52,13 @@ export default class SearchPage extends Component {
           <Link to='/newbook' className="newBookBtn">New Book</Link>
         </section>
         <section className="Search">
-          <div arial-label="author search">
+          <div className="SearchAuth"arial-label="author search">
             <SearchAuthor store={books} updateSearch={this.updateSearchPage}
             />
             <ResultsPage list={filteredBookTitles} />
           </div>
 
-          <div aria-label="genre search">
+          <div className="SearchGenre"aria-label="genre search">
             <SearchGenre store={books} updateSearch={this.updateSearchPage} />
             <ResultsPage list={filteredGenreTitles} />
           </div>

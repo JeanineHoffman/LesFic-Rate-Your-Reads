@@ -8,7 +8,6 @@ export default class SearchGenre extends Component {
   }
 
   buttonClicked = event => {
-    console.log(this.state.searchGenre);
     this.props.updateSearch("", this.state.searchGenre)
   };
 
@@ -32,14 +31,14 @@ export default class SearchGenre extends Component {
 
           <select id="genresearch" className="searchText" name="genreSearch" onChange={this.handleListGenre} value={this.state.genreSearch}>>
 
-          <option value="">--Please Choose a genre--</option>
+          <option value="">--Choose a genre--</option>
             {genres.map(genre =>
               <option value={genre} key={genre}>{genre}</option>
             )}
           </select>
         </section>
         <section>
-          <button className="startSearchbtn handleListGenre" onClick={this.buttonClicked}>Start Search</button>
+          <button className="button handleListGenre" onClick={this.buttonClicked}>Start Search</button>
         </section>
       </div>
     );

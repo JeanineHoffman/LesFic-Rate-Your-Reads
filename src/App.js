@@ -18,7 +18,6 @@ export default class App extends Component {
         return booksResponse.json()
       })
       .then(books => {
-        console.log({ books });
         this.setState({ books })
       })
   };
@@ -51,14 +50,13 @@ export default class App extends Component {
       .then()
     this.setState({ books: [...this.state.books, book] }, () => {
       history.push('/');
-      console.log(this.state.books);
     });
   }
 
   render() {
     return (
       <div className="App">
-        <header role="banner">LesFic Repository</header>
+        <header className="title" role="banner">LesFic Repository</header>
         <section className="container-fluid">
           <Sidebar />
           <main role='main'>

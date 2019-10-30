@@ -34,14 +34,14 @@ export default class SearchByAuthor extends Component {
         <section aria-label="search author" className="searchAuthor">
           <label htmlFor="authorsearch">Choose an author </label>
           <select id="authorsearch" className="searchText" name="authorSearch" onChange={this.handleChangeAuthor} value={this.state.authorSearch}>
-            <option value="">--Please Choose an author--</option>
+            <option value="">--Choose an author--</option>
             {authors.map(author=>
             <option value={author} key={author}>{author}</option>
             )}
           </select>
         </section>
         <section>
-          <button className="startSearchbtn btn" onClick={this.buttonClicked}>Start Search</button>
+          <button className="startSearchbtn button" onClick={this.buttonClicked}>Start Search</button>
         </section>
       
       </div>
